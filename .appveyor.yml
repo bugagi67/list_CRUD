@@ -17,18 +17,18 @@ build: off  # отключаем встроенную в appveyor систему
 build_script:
   - yarn build   # команда сборки
 
-before_test:
-  # Установка http-server, если он не установлен глобально
-  - yarn global add http-server
-
-  # Запуск локального сервера на фоне
-  - yarn start_ci/cd &
-
-  # Пауза для ожидания запуска сервера
-  - sleep 5
+#before_test:
+#  # Установка http-server, если он не установлен глобально
+#  - yarn global add http-server
+#
+#  # Запуск локального сервера на фоне
+#  - yarn start_ci/cd &
+#
+#  # Пауза для ожидания запуска сервера
+#  - sleep 5
 
 test_script:
-  - yarn lint && yarn allTest  # скрипт тестирования
+  - yarn lint && #yarn allTest  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store

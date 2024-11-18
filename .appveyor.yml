@@ -28,7 +28,7 @@ build_script:
 #  - sleep 5
 
 test_script:
-  - yarn lint && #yarn allTest  # скрипт тестирования
+  - yarn lint #&& yarn allTest  # скрипт тестирования
 
 deploy_script:  # скрипт развёртывания
   - git config --global credential.helper store
